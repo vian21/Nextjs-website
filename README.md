@@ -11,7 +11,7 @@ What I learned:
 
 **But most important, I learnt a Javascript framework**
 
-##To run:
+## To run:
 
 ```bash
 npm run dev
