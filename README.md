@@ -9,6 +9,14 @@ What I learned:
 5. Forms and Authentication
 6. Loving JSON 😁
 
-## But most important, I learnt a Javascript framework
+**But most important, I learnt a Javascript framework**
+
+##To run:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
 
 # For Jesus I code
