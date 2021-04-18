@@ -1,30 +1,30 @@
 export default (req, res) => {
 
-    if(req.method=="POST"){
-        
+    if (req.method == "POST") {
+
         const data = req.body
-        const {id}= req.query
+        const { id } = req.query
 
-        const mysql= require('mysql');
+        const mysql = require('mysql');
 
-        const connection= mysql.createConnection({
+        const connection = mysql.createConnection({
             host: 'localhost',
             user: 'root',
             password: '',
             database: 'learning',
-            socketPath:'/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock'
+            socketPath: '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock' // not necesary! Only required for Unix Operating systems
         })
 
         connection.connect();
 
-        connection.query(`UPDATE students SET name='${data.name}', grade='${data.grade}', gender=${data.gender}, DOB='${data.DOB}' WHERE id=${id}`,(error, results, fields)=>{
+        connection.query(`UPDATE students SET name='${data.name}', grade='${data.grade}', gender=${data.gender}, DOB='${data.DOB}' WHERE id=${id}`, (error, results, fields) => {
             res.send("ok")
             console.log(id)
         })
 
         connection.end();
-    }else{
+    } else {
         res.send("At least send me some data :)")
     }
-    
+
 }

@@ -12,7 +12,7 @@ export default function Create() {
                 'Content-Type': 'application/json',
             },
             method: 'POST',
-            body:JSON.stringify({
+            body: JSON.stringify({
                 name: event.target.name.value,
                 grade: event.target.grade.value,
                 DOB: event.target.date.value,

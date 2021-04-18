@@ -6,7 +6,7 @@ export default (req, res) => {
     user: 'root',
     password: '',
     database: 'learning',
-    socketPath: '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock'
+    socketPath: '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock' // not necesary! Only required for Unix Operating systems
   });
 
   connection.connect();

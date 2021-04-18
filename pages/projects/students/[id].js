@@ -2,15 +2,19 @@ import Router, { useRouter } from 'next/router';
 import moment from 'moment'
 
 export async function getStaticPaths() {
+    //get all students data array
     const res = await fetch("http://localhost:3000/api/students/");
     const students = await res.json();
 
+    //use the students array to generate paths
     const paths = students.map(student => {
         return {
             params: { id: student.id.toString() }
         }
     })
 
+    //return the paths created
+    //this will be used to generate static page for each student
     return {
         paths,
         fallback: false
@@ -85,10 +89,10 @@ export default function Student({ student }) {
                 <input type="date" defaultValue={moment(student[0].DOB).format('YYYY-MM-DD')} id="date" placeholder="yyyy-mm-dd" />
                 <br />
 
-                <span>Gender</span> <br/>
+                <span>Gender</span> <br />
                 <select id="gender" >
                     <option value={student[0].gender}>{genders[student[0].gender]}</option>
-                    {genders.map((gender,index) => (
+                    {genders.map((gender, index) => (
                         <option value={index} key={index}>{gender}</option>
                     ))}
                 </select>

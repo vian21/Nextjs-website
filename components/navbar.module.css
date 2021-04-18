@@ -11,9 +11,11 @@
     color: white;
     text-decoration: none;
 }
-.login{
+
+.login {
     float: right !important;
 }
+
 .navbar a:hover {
     color: white !important;
 }
@@ -37,7 +39,7 @@
         padding-bottom: 8px;
     }
 
-    .navbar button{
+    .navbar button {
         font-size: 18px;
     }
 }
