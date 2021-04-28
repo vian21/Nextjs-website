@@ -1,9 +1,18 @@
 import Link from 'next/link'
 import styles from './navbar.module.css'
-import Router, { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
+import Login from './login'
 
-export default function NavBar(req, res) {
+export default function NavBar({ userName, isLoggedIn }) {
   const router = useRouter();
+
+  let button;
+
+  if (isLoggedIn) {
+    button = <Login userName={userName+'⥂'} link="/logout" />
+  } else {
+    button = <Login userName={userName} link="/login" />
+  }
 
   return <div className={styles.navbar}>
 
@@ -25,8 +34,7 @@ export default function NavBar(req, res) {
       <a>Projects</a>
     </Link>
 
-    <Link href='/login'>
-      <a className={styles.login}>Login</a>
-    </Link>
+    {button}
+
   </div>
 }

@@ -7,7 +7,9 @@ What I learned:
 3. APIs
 4. Mysql connection and query implementation in Javascript(really cool😎 )
 5. Forms and Authentication
-6. Loving JSON 😁
+6. Js-cookie
+7. JsonWebToken
+8. Loving JSON 😁
 
 **But most important, I learnt a Javascript framework**
 
