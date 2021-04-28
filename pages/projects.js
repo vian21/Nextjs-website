@@ -6,6 +6,10 @@ export default function Projects() {
         {
             name: "Fetching JSON",
             link: "/projects/students"
+        },
+        {
+            name: "Image Slider",
+            link: "/projects/slider"
         }
     ]
 
