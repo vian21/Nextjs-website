@@ -1,13 +1,10 @@
 // import Swiper bundle with all modules installed
 import Swiper from 'swiper/bundle';
-// import Swiper styles
 import 'swiper/swiper-bundle.min.css';
-
-import Image from 'next/image'
 
 export default function Slider() {
     const swiper = new Swiper('.swiper-container', {
-        // If we need pagination
+        //dots at the bottom to show current picture and position in array
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -34,21 +31,16 @@ export default function Slider() {
     return <div className='main'>
         <div className="swiper-container">
             <div className="swiper-wrapper">
-                {/*slides*/}
-
                 {
                     images.map((image, index) => (
                         <div className="swiper-slide" key={index}>
-                            <img src={image}/>
+                            <img src={image} />
                         </div>
                     ))}
-
-
-
             </div>
 
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div className="swiper-button-next"></div>
+            <div className="swiper-button-prev"></div>
 
             <div className="swiper-pagination"></div>
 

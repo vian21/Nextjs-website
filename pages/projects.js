@@ -18,6 +18,7 @@ export default function Projects() {
             <Head>
                 <title>Projects</title>
             </Head>
+
             <center>
                 <h1>Projects</h1>
             </center>

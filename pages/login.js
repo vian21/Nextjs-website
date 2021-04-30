@@ -3,9 +3,7 @@ import Head from 'next/head';
 import Cookies from 'js-cookie'
 
 export default function Login() {
-
-    var jwt = require("jsonwebtoken")
-
+    
     //loginClick handler
     async function login(event) {
 
