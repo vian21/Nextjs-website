@@ -20,5 +20,3 @@ npm run dev
 # or
 yarn dev
 ```
-
-# For Jesus I code
